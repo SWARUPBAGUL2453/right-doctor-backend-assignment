@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Person List</title>
+        <link rel="stylesheet" href="/styles.css">
+      </head>
+      
+<body>
+    <div class="container">
+        <h1>List of People</h1>
+        <a href="/person/new">➕ Add New Person</a>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Mobile</th>
+            <th>Actions</th>
+          </tr>
+          <% people.forEach(person => { %>
+          <tr>
+            <td><%= person.name %></td>
+            <td><%= person.age %></td>
+            <td><%= person.gender %></td>
+            <td><%= person.mobile %></td>
+            <td class="actions">
+              <a href="/person/<%= person.id %>/edit">✏️ Edit</a>
+              <a href="/person/<%= person.id %>/delete" class="delete-warning">🗑️ Delete</a>
+            </td>
+          </tr>
+          <% }) %>
+        </table>
+      </div>
+      
+</body>
+</html>

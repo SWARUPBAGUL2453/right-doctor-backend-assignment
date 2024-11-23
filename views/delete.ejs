@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Person</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Delete Person</h1>
+        <p class="delete-warning">Are you sure you want to delete <%= person.name %>?</p>
+        <form action="/person/<%= person.id %>/delete" method="POST">
+          <button type="submit">Yes, Delete</button>
+        </form>
+        <a href="/person">Cancel</a>
+      </div>
+      
+</body>
+</html>
